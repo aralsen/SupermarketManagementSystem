@@ -9,7 +9,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class BillProcedures
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=MSI;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
 
         public bool AddBill(BillTable bill)
         {
@@ -37,7 +37,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
         public List<BillTable> GetAllBills()
         {
             List<BillTable> bills = new List<BillTable>();
-            SqlCommand command = new SqlCommand("GetAllBIlls", sqlConnection);
+            SqlCommand command = new SqlCommand("GetAllBills", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();

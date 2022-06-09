@@ -14,7 +14,7 @@ namespace SuperMarketManagementSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startpoint += 1;
+            startpoint += 20;
             MyProgress.Value = startpoint;
             if (MyProgress.Value == 100)
             {
@@ -31,5 +31,14 @@ namespace SuperMarketManagementSystem
             timer1.Start();
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

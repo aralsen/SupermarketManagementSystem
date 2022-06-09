@@ -73,14 +73,19 @@ namespace SuperMarketManagementSystem
             }
         }
 
-        private void ExitLabel_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void PasswordTextBox_OnValueChanged(object sender, EventArgs e)
         {
             PasswordTextBox.isPassword = true;
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

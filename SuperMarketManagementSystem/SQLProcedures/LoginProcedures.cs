@@ -6,7 +6,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class LoginProcedures
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=MSI;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
 
         public DataTable GetSellerUser(String userName, String userPassword)
         {

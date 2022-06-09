@@ -9,8 +9,8 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class ManagerProcedure
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=MSI;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
-        
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+
         public List<ManagerTable> DisplayAllManagers()
         {
             List<ManagerTable> managers = new List<ManagerTable>();
