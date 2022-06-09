@@ -134,6 +134,11 @@ namespace SuperMarketManagementSystem
                 DateTime.Today.Year.ToString();
         }
 
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void AddProductButton_Click(object sender, EventArgs e)
         {
             if (ProductNameTextBox.Text == "" || ProductQuantityTextBox.Text == "")

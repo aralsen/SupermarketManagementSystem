@@ -58,6 +58,7 @@ namespace SuperMarketManagementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.ManagersButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +70,12 @@ namespace SuperMarketManagementSystem
             this.ClearPropertiesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.ClearPropertiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.ClearPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearPropertiesButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ClearPropertiesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.ClearPropertiesButton.ForeColor = System.Drawing.Color.Bisque;
-            this.ClearPropertiesButton.Location = new System.Drawing.Point(74, 514);
+            this.ClearPropertiesButton.Location = new System.Drawing.Point(957, 638);
+            this.ClearPropertiesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClearPropertiesButton.Name = "ClearPropertiesButton";
-            this.ClearPropertiesButton.Size = new System.Drawing.Size(194, 32);
+            this.ClearPropertiesButton.Size = new System.Drawing.Size(259, 39);
             this.ClearPropertiesButton.TabIndex = 17;
             this.ClearPropertiesButton.Text = "Clear Properties";
             this.ClearPropertiesButton.UseVisualStyleBackColor = false;
@@ -87,11 +89,12 @@ namespace SuperMarketManagementSystem
             this.RefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.RefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.RefreshButton.ForeColor = System.Drawing.Color.Bisque;
-            this.RefreshButton.Location = new System.Drawing.Point(705, 82);
+            this.RefreshButton.Location = new System.Drawing.Point(754, 94);
+            this.RefreshButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(93, 29);
+            this.RefreshButton.Size = new System.Drawing.Size(124, 36);
             this.RefreshButton.TabIndex = 16;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = false;
@@ -99,12 +102,13 @@ namespace SuperMarketManagementSystem
             // 
             // CategoryComboBox2
             // 
-            this.CategoryComboBox2.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.CategoryComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CategoryComboBox2.ForeColor = System.Drawing.Color.DarkGreen;
             this.CategoryComboBox2.FormattingEnabled = true;
-            this.CategoryComboBox2.Location = new System.Drawing.Point(542, 82);
+            this.CategoryComboBox2.Location = new System.Drawing.Point(503, 97);
+            this.CategoryComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CategoryComboBox2.Name = "CategoryComboBox2";
-            this.CategoryComboBox2.Size = new System.Drawing.Size(157, 28);
+            this.CategoryComboBox2.Size = new System.Drawing.Size(208, 33);
             this.CategoryComboBox2.TabIndex = 15;
             this.CategoryComboBox2.Text = "Select Category";
             this.CategoryComboBox2.SelectionChangeCommitted += new System.EventHandler(this.CategoryComboBox2_SelectionChangeCommitted);
@@ -117,11 +121,12 @@ namespace SuperMarketManagementSystem
             this.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.DeleteButton.ForeColor = System.Drawing.Color.Bisque;
-            this.DeleteButton.Location = new System.Drawing.Point(215, 463);
+            this.DeleteButton.Location = new System.Drawing.Point(1145, 575);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(100, 32);
+            this.DeleteButton.Size = new System.Drawing.Size(133, 39);
             this.DeleteButton.TabIndex = 13;
             this.DeleteButton.Text = "DELETE";
             this.DeleteButton.UseVisualStyleBackColor = false;
@@ -135,11 +140,12 @@ namespace SuperMarketManagementSystem
             this.EditButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.EditButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.EditButton.ForeColor = System.Drawing.Color.Bisque;
-            this.EditButton.Location = new System.Drawing.Point(112, 463);
+            this.EditButton.Location = new System.Drawing.Point(1007, 575);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(84, 32);
+            this.EditButton.Size = new System.Drawing.Size(112, 39);
             this.EditButton.TabIndex = 12;
             this.EditButton.Text = "EDIT";
             this.EditButton.UseVisualStyleBackColor = false;
@@ -153,11 +159,12 @@ namespace SuperMarketManagementSystem
             this.AddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.AddButton.ForeColor = System.Drawing.Color.Bisque;
-            this.AddButton.Location = new System.Drawing.Point(26, 463);
+            this.AddButton.Location = new System.Drawing.Point(893, 575);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(80, 32);
+            this.AddButton.Size = new System.Drawing.Size(107, 39);
             this.AddButton.TabIndex = 11;
             this.AddButton.Text = "ADD";
             this.AddButton.UseVisualStyleBackColor = false;
@@ -165,30 +172,32 @@ namespace SuperMarketManagementSystem
             // 
             // CategoryComboBox1
             // 
-            this.CategoryComboBox1.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.CategoryComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CategoryComboBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.CategoryComboBox1.FormattingEnabled = true;
-            this.CategoryComboBox1.Location = new System.Drawing.Point(154, 392);
+            this.CategoryComboBox1.Location = new System.Drawing.Point(1063, 487);
+            this.CategoryComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CategoryComboBox1.Name = "CategoryComboBox1";
-            this.CategoryComboBox1.Size = new System.Drawing.Size(157, 28);
+            this.CategoryComboBox1.Size = new System.Drawing.Size(208, 33);
             this.CategoryComboBox1.TabIndex = 10;
             this.CategoryComboBox1.Text = "Select Category";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Bisque;
-            this.label6.Location = new System.Drawing.Point(43, 401);
+            this.label6.Location = new System.Drawing.Point(915, 499);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 20);
+            this.label6.Size = new System.Drawing.Size(132, 25);
             this.label6.TabIndex = 9;
             this.label6.Text = "CATEGORY";
             // 
             // ProductPriceTextBox
             // 
             this.ProductPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductPriceTextBox.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.ProductPriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ProductPriceTextBox.ForeColor = System.Drawing.Color.Gold;
             this.ProductPriceTextBox.HintForeColor = System.Drawing.Color.Empty;
             this.ProductPriceTextBox.HintText = "";
@@ -197,28 +206,29 @@ namespace SuperMarketManagementSystem
             this.ProductPriceTextBox.LineIdleColor = System.Drawing.Color.Bisque;
             this.ProductPriceTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.ProductPriceTextBox.LineThickness = 4;
-            this.ProductPriceTextBox.Location = new System.Drawing.Point(154, 346);
-            this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ProductPriceTextBox.Location = new System.Drawing.Point(1063, 431);
+            this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ProductPriceTextBox.Name = "ProductPriceTextBox";
-            this.ProductPriceTextBox.Size = new System.Drawing.Size(157, 26);
+            this.ProductPriceTextBox.Size = new System.Drawing.Size(209, 34);
             this.ProductPriceTextBox.TabIndex = 8;
             this.ProductPriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Bisque;
-            this.label5.Location = new System.Drawing.Point(43, 352);
+            this.label5.Location = new System.Drawing.Point(915, 438);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.Size = new System.Drawing.Size(76, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "PRICE";
             // 
             // ProductQuantityTextBox
             // 
             this.ProductQuantityTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductQuantityTextBox.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.ProductQuantityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ProductQuantityTextBox.ForeColor = System.Drawing.Color.Gold;
             this.ProductQuantityTextBox.HintForeColor = System.Drawing.Color.Empty;
             this.ProductQuantityTextBox.HintText = "";
@@ -227,28 +237,29 @@ namespace SuperMarketManagementSystem
             this.ProductQuantityTextBox.LineIdleColor = System.Drawing.Color.Bisque;
             this.ProductQuantityTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.ProductQuantityTextBox.LineThickness = 4;
-            this.ProductQuantityTextBox.Location = new System.Drawing.Point(154, 293);
-            this.ProductQuantityTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ProductQuantityTextBox.Location = new System.Drawing.Point(1063, 366);
+            this.ProductQuantityTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ProductQuantityTextBox.Name = "ProductQuantityTextBox";
-            this.ProductQuantityTextBox.Size = new System.Drawing.Size(157, 26);
+            this.ProductQuantityTextBox.Size = new System.Drawing.Size(209, 34);
             this.ProductQuantityTextBox.TabIndex = 6;
             this.ProductQuantityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Bisque;
-            this.label4.Location = new System.Drawing.Point(43, 299);
+            this.label4.Location = new System.Drawing.Point(915, 373);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.Size = new System.Drawing.Size(122, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "QUANTITY";
             // 
             // ProductNameTextBox
             // 
             this.ProductNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductNameTextBox.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.ProductNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ProductNameTextBox.ForeColor = System.Drawing.Color.Gold;
             this.ProductNameTextBox.HintForeColor = System.Drawing.Color.Empty;
             this.ProductNameTextBox.HintText = "";
@@ -257,28 +268,29 @@ namespace SuperMarketManagementSystem
             this.ProductNameTextBox.LineIdleColor = System.Drawing.Color.Bisque;
             this.ProductNameTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.ProductNameTextBox.LineThickness = 4;
-            this.ProductNameTextBox.Location = new System.Drawing.Point(154, 244);
-            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ProductNameTextBox.Location = new System.Drawing.Point(1063, 305);
+            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ProductNameTextBox.Name = "ProductNameTextBox";
-            this.ProductNameTextBox.Size = new System.Drawing.Size(157, 26);
+            this.ProductNameTextBox.Size = new System.Drawing.Size(209, 34);
             this.ProductNameTextBox.TabIndex = 4;
             this.ProductNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Bisque;
-            this.label3.Location = new System.Drawing.Point(43, 250);
+            this.label3.Location = new System.Drawing.Point(915, 313);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "NAME";
             // 
             // ProductIDTextBox
             // 
             this.ProductIDTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductIDTextBox.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.ProductIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ProductIDTextBox.ForeColor = System.Drawing.Color.Gold;
             this.ProductIDTextBox.HintForeColor = System.Drawing.Color.Empty;
             this.ProductIDTextBox.HintText = "";
@@ -287,21 +299,22 @@ namespace SuperMarketManagementSystem
             this.ProductIDTextBox.LineIdleColor = System.Drawing.Color.Bisque;
             this.ProductIDTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.ProductIDTextBox.LineThickness = 4;
-            this.ProductIDTextBox.Location = new System.Drawing.Point(154, 197);
-            this.ProductIDTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ProductIDTextBox.Location = new System.Drawing.Point(1063, 247);
+            this.ProductIDTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ProductIDTextBox.Name = "ProductIDTextBox";
-            this.ProductIDTextBox.Size = new System.Drawing.Size(157, 26);
+            this.ProductIDTextBox.Size = new System.Drawing.Size(209, 34);
             this.ProductIDTextBox.TabIndex = 2;
             this.ProductIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courgette", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Bisque;
-            this.label2.Location = new System.Drawing.Point(43, 203);
+            this.label2.Location = new System.Drawing.Point(915, 255);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 20);
+            this.label2.Size = new System.Drawing.Size(33, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID";
             // 
@@ -315,9 +328,10 @@ namespace SuperMarketManagementSystem
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.Bisque;
-            this.ExitButton.Location = new System.Drawing.Point(974, -8);
+            this.ExitButton.Location = new System.Drawing.Point(1299, -10);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(21, 26);
+            this.ExitButton.Size = new System.Drawing.Size(28, 32);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "x";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -329,9 +343,10 @@ namespace SuperMarketManagementSystem
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Blackadder ITC", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label7.ForeColor = System.Drawing.Color.Gold;
-            this.label7.Location = new System.Drawing.Point(12, 66);
+            this.label7.Location = new System.Drawing.Point(16, 81);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(354, 45);
+            this.label7.Size = new System.Drawing.Size(441, 56);
             this.label7.TabIndex = 29;
             this.label7.Text = "SUPERMARKET";
             // 
@@ -341,9 +356,10 @@ namespace SuperMarketManagementSystem
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Blackadder ITC", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(66, 15);
+            this.label8.Location = new System.Drawing.Point(88, 18);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(214, 45);
+            this.label8.Size = new System.Drawing.Size(265, 56);
             this.label8.TabIndex = 28;
             this.label8.Text = "RODOSTO";
             // 
@@ -367,7 +383,7 @@ namespace SuperMarketManagementSystem
             this.ProductDataGridView.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(239)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Courgette", 12F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(201)))), ((int)(((byte)(138)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -375,12 +391,14 @@ namespace SuperMarketManagementSystem
             this.ProductDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.ProductDataGridView.EnableHeadersVisualStyles = false;
             this.ProductDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(231)))), ((int)(((byte)(201)))));
-            this.ProductDataGridView.Location = new System.Drawing.Point(351, 117);
+            this.ProductDataGridView.Location = new System.Drawing.Point(13, 146);
+            this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductDataGridView.Name = "ProductDataGridView";
             this.ProductDataGridView.RowHeadersVisible = false;
+            this.ProductDataGridView.RowHeadersWidth = 51;
             this.ProductDataGridView.RowTemplate.Height = 28;
             this.ProductDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductDataGridView.Size = new System.Drawing.Size(631, 482);
+            this.ProductDataGridView.Size = new System.Drawing.Size(841, 593);
             this.ProductDataGridView.TabIndex = 14;
             this.ProductDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green;
             this.ProductDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(231)))), ((int)(((byte)(203)))));
@@ -399,7 +417,7 @@ namespace SuperMarketManagementSystem
             this.ProductDataGridView.ThemeStyle.ReadOnly = false;
             this.ProductDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(239)))), ((int)(((byte)(220)))));
             this.ProductDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ProductDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Courgette", 12F);
+            this.ProductDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ProductDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.ProductDataGridView.ThemeStyle.RowsStyle.Height = 28;
             this.ProductDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(201)))), ((int)(((byte)(138)))));
@@ -411,11 +429,12 @@ namespace SuperMarketManagementSystem
             this.LogoutLabel.AutoSize = true;
             this.LogoutLabel.BackColor = System.Drawing.Color.Transparent;
             this.LogoutLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutLabel.Font = new System.Drawing.Font("Courgette", 14.25F);
+            this.LogoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.LogoutLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.LogoutLabel.Location = new System.Drawing.Point(910, 27);
+            this.LogoutLabel.Location = new System.Drawing.Point(1213, 33);
+            this.LogoutLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogoutLabel.Name = "LogoutLabel";
-            this.LogoutLabel.Size = new System.Drawing.Size(68, 24);
+            this.LogoutLabel.Size = new System.Drawing.Size(87, 29);
             this.LogoutLabel.TabIndex = 24;
             this.LogoutLabel.Text = "Logout";
             this.LogoutLabel.Click += new System.EventHandler(this.LogoutLabel_Click);
@@ -428,11 +447,12 @@ namespace SuperMarketManagementSystem
             this.CategoriesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.CategoriesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.CategoriesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CategoriesButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CategoriesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.CategoriesButton.ForeColor = System.Drawing.Color.Bisque;
-            this.CategoriesButton.Location = new System.Drawing.Point(554, 23);
+            this.CategoriesButton.Location = new System.Drawing.Point(739, 28);
+            this.CategoriesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CategoriesButton.Name = "CategoriesButton";
-            this.CategoriesButton.Size = new System.Drawing.Size(126, 32);
+            this.CategoriesButton.Size = new System.Drawing.Size(168, 39);
             this.CategoriesButton.TabIndex = 2;
             this.CategoriesButton.Text = "Categories";
             this.CategoriesButton.UseVisualStyleBackColor = false;
@@ -446,11 +466,12 @@ namespace SuperMarketManagementSystem
             this.SellersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.SellersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.SellersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SellersButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.SellersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.SellersButton.ForeColor = System.Drawing.Color.Bisque;
-            this.SellersButton.Location = new System.Drawing.Point(415, 23);
+            this.SellersButton.Location = new System.Drawing.Point(553, 28);
+            this.SellersButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SellersButton.Name = "SellersButton";
-            this.SellersButton.Size = new System.Drawing.Size(100, 32);
+            this.SellersButton.Size = new System.Drawing.Size(133, 39);
             this.SellersButton.TabIndex = 1;
             this.SellersButton.Text = "Sellers";
             this.SellersButton.UseVisualStyleBackColor = false;
@@ -459,11 +480,12 @@ namespace SuperMarketManagementSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Courgette", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.Bisque;
-            this.label1.Location = new System.Drawing.Point(41, 136);
+            this.label1.Location = new System.Drawing.Point(913, 167);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 33);
+            this.label1.Size = new System.Drawing.Size(382, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "MANAGE PRODUCTS";
             // 
@@ -473,9 +495,10 @@ namespace SuperMarketManagementSystem
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Bisque;
-            this.label9.Location = new System.Drawing.Point(12, 587);
+            this.label9.Location = new System.Drawing.Point(16, 722);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 15);
+            this.label9.Size = new System.Drawing.Size(83, 17);
             this.label9.TabIndex = 30;
             this.label9.Text = "Version 1.0";
             // 
@@ -487,22 +510,35 @@ namespace SuperMarketManagementSystem
             this.ManagersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.ManagersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.ManagersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManagersButton.Font = new System.Drawing.Font("Courgette", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ManagersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.ManagersButton.ForeColor = System.Drawing.Color.Bisque;
-            this.ManagersButton.Location = new System.Drawing.Point(719, 18);
+            this.ManagersButton.Location = new System.Drawing.Point(959, 22);
+            this.ManagersButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ManagersButton.Name = "ManagersButton";
-            this.ManagersButton.Size = new System.Drawing.Size(137, 42);
+            this.ManagersButton.Size = new System.Drawing.Size(183, 52);
             this.ManagersButton.TabIndex = 56;
             this.ManagersButton.Text = "Managers";
             this.ManagersButton.UseVisualStyleBackColor = false;
             this.ManagersButton.Click += new System.EventHandler(this.ManagersButton_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label10.ForeColor = System.Drawing.Color.Bisque;
+            this.label10.Location = new System.Drawing.Point(913, 167);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(382, 39);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "MANAGE PRODUCTS";
+            // 
             // ProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(994, 611);
+            this.ClientSize = new System.Drawing.Size(1325, 752);
             this.Controls.Add(this.ManagersButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -517,6 +553,7 @@ namespace SuperMarketManagementSystem
             this.Controls.Add(this.SellersButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label2);
@@ -530,6 +567,7 @@ namespace SuperMarketManagementSystem
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ProductQuantityTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
@@ -567,5 +605,6 @@ namespace SuperMarketManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button ManagersButton;
+        private System.Windows.Forms.Label label10;
     }
 }
