@@ -6,14 +6,14 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class LoginProcedures
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=managementDB;integrated security=True;MultipleActiveResultSets=True;");
 
         public DataTable GetSellerUser(String userName, String userPassword)
         {
-            SqlCommand command = new SqlCommand("GetSellerUser", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_employee", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@sellerName", userName);
-            command.Parameters.AddWithValue("@sellerPassword", userPassword);
+            command.Parameters.AddWithValue("@email", userName);
+            command.Parameters.AddWithValue("@password", userPassword);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
 
@@ -26,10 +26,10 @@ namespace SuperMarketManagementSystem.SQLProcedures
 
         public DataTable GetManagerUser(String userName, String userPassword)
         {
-            SqlCommand command = new SqlCommand("GetManagerUser", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_employee", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@managerName", userName);
-            command.Parameters.AddWithValue("@managerPassword", userPassword);
+            command.Parameters.AddWithValue("@email", userName);
+            command.Parameters.AddWithValue("@password", userPassword);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
 

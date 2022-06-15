@@ -10,15 +10,11 @@
 namespace SuperMarketManagementSystem.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ManagerTable
+    public partial class sp_display_categories_Result
     {
-        public int managerID { get; set; }
-        public string managerName { get; set; }
-        public int managerAge { get; set; }
-        public string managerPhone { get; set; }
-        public string managerAddress { get; set; }
-        public string managerPassword { get; set; }
+        public int category_id { get; set; }
+        public string category_name { get; set; }
+        public string description { get; set; }
     }
 }

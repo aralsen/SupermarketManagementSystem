@@ -7,7 +7,7 @@ namespace SuperMarketManagementSystem
 {
     public partial class SellerForm : Form
     {
-        private SellerProcedures SellerSqlProcedures = new SellerProcedures();
+        private EmployeeProcedures SellerSqlProcedures = new EmployeeProcedures();
 
         public SellerForm()
         {
@@ -21,6 +21,7 @@ namespace SuperMarketManagementSystem
             SellerAgeTextBox.Text = "";
             SellerPhoneTextBox.Text = "";
             SellerPasswordTextBox.Text = "";
+            EmailTextBox.Text = "";
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -44,31 +45,34 @@ namespace SuperMarketManagementSystem
 
         private void SellerForm_Load(object sender, EventArgs e)
         {
-            SellerDataGridView.DataSource = SellerSqlProcedures.GetAllSellers();
+            SellerDataGridView.DataSource = SellerSqlProcedures.GetAllSalespersons();
             ClearTextBoxes();
         }
 
         private void SellerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             SellerIDTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            SellerNameTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            SellerAgeTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            SellerNameTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            SellerAgeTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
             SellerPhoneTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[3].Value.ToString();
-            SellerPasswordTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+            SellerPasswordTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[6].Value.ToString();
+            EmailTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             try
             {
-                SellerTable seller = new SellerTable();
-                seller.sellerID = int.Parse(SellerIDTextBox.Text);
-                seller.sellerName = SellerNameTextBox.Text;
-                seller.sellerAge = int.Parse(SellerAgeTextBox.Text);
-                seller.sellerPhone = SellerPhoneTextBox.Text;
-                seller.sellerPassword = SellerPasswordTextBox.Text;
+                employees seller = new employees();
+                seller.employee_id = int.Parse(SellerIDTextBox.Text);
+                seller.name = SellerNameTextBox.Text;
+                seller.age = int.Parse(SellerAgeTextBox.Text);
+                seller.phone = SellerPhoneTextBox.Text;
+                seller.password = SellerPasswordTextBox.Text;
+                seller.email = EmailTextBox.Text;
+                seller.job_id = 2;
 
-                SellerSqlProcedures.AddSeller(seller);
+                SellerSqlProcedures.AddEmployee(seller);
                 MessageBox.Show("Seller added successfully");
                 SellerForm_Load(sender, e);
             }
@@ -89,14 +93,15 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    SellerTable seller = new SellerTable();
-                    seller.sellerID = int.Parse(SellerIDTextBox.Text);
-                    seller.sellerName = SellerNameTextBox.Text;
-                    seller.sellerAge = int.Parse(SellerAgeTextBox.Text);
-                    seller.sellerPhone = SellerPhoneTextBox.Text;
-                    seller.sellerPassword = SellerPasswordTextBox.Text;
+                    employees seller = new employees();
+                    seller.employee_id = int.Parse(SellerIDTextBox.Text);
+                    seller.name = SellerNameTextBox.Text;
+                    seller.age = int.Parse(SellerAgeTextBox.Text);
+                    seller.phone = SellerPhoneTextBox.Text;
+                    seller.password = SellerPasswordTextBox.Text;
+                    seller.email = EmailTextBox.Text;
 
-                    SellerSqlProcedures.UpdateSeller(seller);
+                    SellerSqlProcedures.UpdateEmployee(seller);
                     MessageBox.Show("Seller successfully updated");
                     SellerForm_Load(sender, e);
                 }
@@ -117,7 +122,7 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    SellerSqlProcedures.DeleteSeller(int.Parse(SellerIDTextBox.Text));
+                    SellerSqlProcedures.DeleteEmployee(int.Parse(SellerIDTextBox.Text));
                     MessageBox.Show("Seller deleted successfully");
                     SellerForm_Load(sender, e);
                 }

@@ -19,7 +19,7 @@ namespace SuperMarketManagementSystem
             InitializeComponent();
         }
 
-        private ManagerProcedure ManagerSqlProcedure = new ManagerProcedure();
+        private EmployeeProcedures ManagerSqlProcedure = new EmployeeProcedures();
 
         private void ClearTextBoxes()
         {
@@ -28,7 +28,7 @@ namespace SuperMarketManagementSystem
             AgeTextBox.Text = "";
             PhoneTextBox.Text = "";
             PasswordTextBox.Text = "";
-            AddressTextBox.Text = "";
+            EmailTextBox.Text = "";
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -59,33 +59,34 @@ namespace SuperMarketManagementSystem
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-            ManagerDataGridView.DataSource = ManagerSqlProcedure.DisplayAllManagers();
+            ManagerDataGridView.DataSource = ManagerSqlProcedure.GetAllManagers();
             ClearTextBoxes();
         }
 
         private void ManagerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             IDTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            NameTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            AgeTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            NameTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            AgeTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
             PhoneTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[3].Value.ToString();
-            PasswordTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[5].Value.ToString();
-            AddressTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+            EmailTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            PasswordTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[6].Value.ToString();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             try
             {
-                ManagerTable manager = new ManagerTable();
-                manager.managerID = int.Parse(IDTextBox.Text);
-                manager.managerName = NameTextBox.Text;
-                manager.managerAge = int.Parse(AgeTextBox.Text);
-                manager.managerPhone = PhoneTextBox.Text;
-                manager.managerPassword = PasswordTextBox.Text;
-                manager.managerAddress = AddressTextBox.Text;
+                employees manager = new employees();
+                manager.employee_id = int.Parse(IDTextBox.Text);
+                manager.name = NameTextBox.Text;
+                manager.age = int.Parse(AgeTextBox.Text);
+                manager.phone = PhoneTextBox.Text;
+                manager.password = PasswordTextBox.Text;
+                manager.email = EmailTextBox.Text;
+                manager.job_id = 1;
 
-                ManagerSqlProcedure.AddManger(manager);
+                ManagerSqlProcedure.AddEmployee(manager);
                 MessageBox.Show("Manager added successfully");
                 ManagerForm_Load(sender, e);
             }
@@ -106,15 +107,16 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    ManagerTable manager = new ManagerTable();
-                    manager.managerID = int.Parse(IDTextBox.Text);
-                    manager.managerName = NameTextBox.Text;
-                    manager.managerAge = int.Parse(AgeTextBox.Text);
-                    manager.managerPhone = PhoneTextBox.Text;
-                    manager.managerPassword = PasswordTextBox.Text;
-                    manager.managerAddress = AddressTextBox.Text;
+                    employees manager = new employees();
+                    manager.employee_id = int.Parse(IDTextBox.Text);
+                    manager.name = NameTextBox.Text;
+                    manager.age = int.Parse(AgeTextBox.Text);
+                    manager.phone = PhoneTextBox.Text;
+                    manager.password = PasswordTextBox.Text;
+                    manager.email = EmailTextBox.Text;
+                    manager.job_id = 1;
 
-                    ManagerSqlProcedure.UpdateManager(manager);
+                    ManagerSqlProcedure.UpdateEmployee(manager);
                     MessageBox.Show("Manager successfully updated");
                     ManagerForm_Load(sender, e);
                 }
@@ -135,7 +137,7 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    ManagerSqlProcedure.DeleteManger(int.Parse(IDTextBox.Text));
+                    ManagerSqlProcedure.DeleteEmployee(int.Parse(IDTextBox.Text));
                     MessageBox.Show("Manager deleted successfully!");
                     ManagerForm_Load(sender, e);
                 }

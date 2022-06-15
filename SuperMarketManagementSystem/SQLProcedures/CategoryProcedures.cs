@@ -9,15 +9,15 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class CategoryProcedures
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=managementDB;integrated security=True;MultipleActiveResultSets=True;");
 
-        public bool AddCategory(CategoryTable category)
+        public bool AddCategory(categories category)
         {
-            SqlCommand command = new SqlCommand("AddCategory", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_add_category", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@categoryID", category.categoryID);
-            command.Parameters.AddWithValue("@categoryName", category.categoryName);
-            command.Parameters.AddWithValue("@categoryDescription", category.categoryDescription);
+            command.Parameters.AddWithValue("@category_id", category.category_id);
+            command.Parameters.AddWithValue("@category_name", category.category_name);
+            command.Parameters.AddWithValue("@description", category.description);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -33,10 +33,10 @@ namespace SuperMarketManagementSystem.SQLProcedures
             }
         }
 
-        public List<CategoryTable> GetAllCategories()
+        public List<categories> GetAllCategories()
         {
-            List<CategoryTable> categories = new List<CategoryTable>();
-            SqlCommand command = new SqlCommand("DisplayAllCategories", sqlConnection);
+            List<categories> categories = new List<categories>();
+            SqlCommand command = new SqlCommand("sp_display_categories", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -46,11 +46,11 @@ namespace SuperMarketManagementSystem.SQLProcedures
             sqlConnection.Close();
 
             categories = (from DataRow dataRow in dataTable.Rows
-                          select new CategoryTable()
+                          select new categories()
                           {
-                              categoryID = Convert.ToInt32(dataRow["categoryID"]),
-                              categoryName = Convert.ToString(dataRow["categoryName"]),
-                              categoryDescription = Convert.ToString(dataRow["categoryDescription"])
+                              category_id = Convert.ToInt32(dataRow["category_id"]),
+                              category_name = Convert.ToString(dataRow["category_name"]),
+                              description = Convert.ToString(dataRow["description"])
                           }).ToList();
 
             return categories;
@@ -58,9 +58,9 @@ namespace SuperMarketManagementSystem.SQLProcedures
 
         public bool DeleteCategory(int id)
         {
-            SqlCommand command = new SqlCommand("DeleteCategory", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_delete_category", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@categoryID", id);
+            command.Parameters.AddWithValue("@category_id", id);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -76,13 +76,13 @@ namespace SuperMarketManagementSystem.SQLProcedures
             }
         }
 
-        public bool UpdateCategory(CategoryTable category)
+        public bool UpdateCategory(categories category)
         {
-            SqlCommand command = new SqlCommand("UpdateCategory", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_update_category", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@categoryID", category.categoryID);
-            command.Parameters.AddWithValue("@categoryName", category.categoryName);
-            command.Parameters.AddWithValue("@categoryDescription", category.categoryDescription);
+            command.Parameters.AddWithValue("@category_id", category.category_id);
+            command.Parameters.AddWithValue("@category_name", category.category_name);
+            command.Parameters.AddWithValue("@description", category.description);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -101,7 +101,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
         public List<String> GetCategoryNames()
         {
             List<String> categoryNames = new List<String>();
-            SqlCommand command = new SqlCommand("GetCategoryNames", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_category_names", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -111,7 +111,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
             sqlConnection.Close();
 
             categoryNames = (from DataRow dataRow in dataTable.Rows
-                             select dataRow["categoryName"].ToString()).ToList();
+                             select dataRow["category_name"].ToString()).ToList();
 
             return categoryNames;
         }

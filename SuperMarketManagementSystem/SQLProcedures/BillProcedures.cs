@@ -9,16 +9,16 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class BillProcedures
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=managementDB;integrated security=True;MultipleActiveResultSets=True;");
 
-        public bool AddBill(BillTable bill)
+        public bool AddBill(bills bill)
         {
-            SqlCommand command = new SqlCommand("AddBill", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_add_bill", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@billID", bill.billID);
-            command.Parameters.AddWithValue("@sellerName", bill.sellerName);
-            command.Parameters.AddWithValue("@billDate", bill.billDate);
-            command.Parameters.AddWithValue("@totalAmount", bill.totalAmount);
+            command.Parameters.AddWithValue("@bill_id", bill.bill_id);
+            command.Parameters.AddWithValue("@employee_id", bill.employee_id);
+            command.Parameters.AddWithValue("@bill_date", bill.bill_date);
+            command.Parameters.AddWithValue("@total_amount", bill.total_amount);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -34,10 +34,10 @@ namespace SuperMarketManagementSystem.SQLProcedures
             }
         }
 
-        public List<BillTable> GetAllBills()
+        public List<bills> GetAllBills()
         {
-            List<BillTable> bills = new List<BillTable>();
-            SqlCommand command = new SqlCommand("GetAllBills", sqlConnection);
+            List<bills> bills = new List<bills>();
+            SqlCommand command = new SqlCommand("sp_get_bills", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -47,12 +47,12 @@ namespace SuperMarketManagementSystem.SQLProcedures
             sqlConnection.Close();
 
             bills = (from DataRow dataRow in dataTable.Rows
-                     select new BillTable()
+                     select new bills()
                      {
-                         billID = Convert.ToInt32(dataRow["billID"]),
-                         sellerName = Convert.ToString(dataRow["sellerName"]),
-                         billDate = Convert.ToString(dataRow["billDate"]),
-                         totalAmount = Convert.ToInt32(dataRow["totalAmount"])
+                         bill_id = Convert.ToInt32(dataRow["bill_id"]),
+                         employee_id = Convert.ToInt32(dataRow["employee_id"]),
+                         bill_date = Convert.ToString(dataRow["bill_date"]),
+                         total_amount = Convert.ToInt32(dataRow["total_amount"])
                      }).ToList();
 
             return bills;
@@ -60,9 +60,9 @@ namespace SuperMarketManagementSystem.SQLProcedures
 
         public bool DeleteBill(int id)
         {
-            SqlCommand command = new SqlCommand("DeleteBill", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_delete_bill", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@billID", id);
+            command.Parameters.AddWithValue("@bill_id", id);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();

@@ -26,10 +26,10 @@ namespace SuperMarketManagementSystem
         {
             try
             {
-                CategoryTable category = new CategoryTable();
-                category.categoryID = int.Parse(CategoryIDTextBox.Text);
-                category.categoryName = CategoryNameTextBox.Text;
-                category.categoryDescription = CategoryDescriptionTextBox.Text;
+                categories category = new categories();
+                category.category_id = int.Parse(CategoryIDTextBox.Text);
+                category.category_name = CategoryNameTextBox.Text;
+                category.description = CategoryDescriptionTextBox.Text;
 
                 CategorySqlProcedure.AddCategory(category);
                 MessageBox.Show("Category Added Successfully");
@@ -92,10 +92,10 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    CategoryTable category = new CategoryTable();
-                    category.categoryID = int.Parse(CategoryIDTextBox.Text);
-                    category.categoryName = CategoryNameTextBox.Text;
-                    category.categoryDescription = CategoryDescriptionTextBox.Text;
+                    categories category = new categories();
+                    category.category_id = int.Parse(CategoryIDTextBox.Text);
+                    category.category_name = CategoryNameTextBox.Text;
+                    category.description = CategoryDescriptionTextBox.Text;
 
                     CategorySqlProcedure.UpdateCategory(category);
                     MessageBox.Show("Category successfully updated");

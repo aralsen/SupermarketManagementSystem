@@ -39,8 +39,6 @@ namespace SuperMarketManagementSystem
             this.ClearLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UserNameTextBox
@@ -52,10 +50,10 @@ namespace SuperMarketManagementSystem
             this.UserNameTextBox.HintText = "";
             this.UserNameTextBox.isPassword = false;
             this.UserNameTextBox.LineFocusedColor = System.Drawing.Color.Black;
-            this.UserNameTextBox.LineIdleColor = System.Drawing.Color.Orchid;
+            this.UserNameTextBox.LineIdleColor = System.Drawing.Color.Black;
             this.UserNameTextBox.LineMouseHoverColor = System.Drawing.Color.Black;
             this.UserNameTextBox.LineThickness = 3;
-            this.UserNameTextBox.Location = new System.Drawing.Point(185, 204);
+            this.UserNameTextBox.Location = new System.Drawing.Point(185, 293);
             this.UserNameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.UserNameTextBox.Name = "UserNameTextBox";
             this.UserNameTextBox.Size = new System.Drawing.Size(277, 33);
@@ -66,8 +64,8 @@ namespace SuperMarketManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Orchid;
-            this.label2.Location = new System.Drawing.Point(32, 214);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(36, 303);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 23);
@@ -78,8 +76,8 @@ namespace SuperMarketManagementSystem
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Orchid;
-            this.label3.Location = new System.Drawing.Point(32, 283);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(36, 380);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 23);
@@ -95,10 +93,10 @@ namespace SuperMarketManagementSystem
             this.PasswordTextBox.HintText = "";
             this.PasswordTextBox.isPassword = false;
             this.PasswordTextBox.LineFocusedColor = System.Drawing.Color.Black;
-            this.PasswordTextBox.LineIdleColor = System.Drawing.Color.Orchid;
+            this.PasswordTextBox.LineIdleColor = System.Drawing.Color.Black;
             this.PasswordTextBox.LineMouseHoverColor = System.Drawing.Color.Black;
             this.PasswordTextBox.LineThickness = 3;
-            this.PasswordTextBox.Location = new System.Drawing.Point(185, 273);
+            this.PasswordTextBox.Location = new System.Drawing.Point(185, 370);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(277, 33);
@@ -110,12 +108,12 @@ namespace SuperMarketManagementSystem
             // 
             this.RoleComboBox.BackColor = System.Drawing.SystemColors.Window;
             this.RoleComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleComboBox.ForeColor = System.Drawing.Color.Orchid;
+            this.RoleComboBox.ForeColor = System.Drawing.Color.Black;
             this.RoleComboBox.FormattingEnabled = true;
             this.RoleComboBox.Items.AddRange(new object[] {
             "MANAGER",
             "SELLER"});
-            this.RoleComboBox.Location = new System.Drawing.Point(118, 345);
+            this.RoleComboBox.Location = new System.Drawing.Point(123, 229);
             this.RoleComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.RoleComboBox.Name = "RoleComboBox";
             this.RoleComboBox.Size = new System.Drawing.Size(276, 31);
@@ -129,7 +127,7 @@ namespace SuperMarketManagementSystem
             this.LoginButton.ActiveFillColor = System.Drawing.Color.Orchid;
             this.LoginButton.ActiveForecolor = System.Drawing.Color.Black;
             this.LoginButton.ActiveLineColor = System.Drawing.Color.Orchid;
-            this.LoginButton.BackColor = System.Drawing.SystemColors.Control;
+            this.LoginButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
             this.LoginButton.ButtonText = "LOGIN";
             this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -137,10 +135,10 @@ namespace SuperMarketManagementSystem
             this.LoginButton.ForeColor = System.Drawing.Color.White;
             this.LoginButton.IdleBorderThickness = 1;
             this.LoginButton.IdleCornerRadius = 20;
-            this.LoginButton.IdleFillColor = System.Drawing.Color.Orchid;
+            this.LoginButton.IdleFillColor = System.Drawing.Color.SkyBlue;
             this.LoginButton.IdleForecolor = System.Drawing.Color.Black;
             this.LoginButton.IdleLineColor = System.Drawing.Color.SeaShell;
-            this.LoginButton.Location = new System.Drawing.Point(89, 454);
+            this.LoginButton.Location = new System.Drawing.Point(89, 466);
             this.LoginButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(331, 64);
@@ -153,8 +151,8 @@ namespace SuperMarketManagementSystem
             this.ClearLabel.AutoSize = true;
             this.ClearLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ClearLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearLabel.ForeColor = System.Drawing.Color.Orchid;
-            this.ClearLabel.Location = new System.Drawing.Point(229, 413);
+            this.ClearLabel.ForeColor = System.Drawing.Color.Black;
+            this.ClearLabel.Location = new System.Drawing.Point(399, 421);
             this.ClearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ClearLabel.Name = "ClearLabel";
             this.ClearLabel.Size = new System.Drawing.Size(63, 23);
@@ -165,9 +163,9 @@ namespace SuperMarketManagementSystem
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DarkViolet;
+            this.label8.BackColor = System.Drawing.Color.DarkBlue;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label8.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.label8.Location = new System.Drawing.Point(481, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -180,10 +178,11 @@ namespace SuperMarketManagementSystem
             // 
             this.guna2GradientCircleButton1.CheckedState.Parent = this.guna2GradientCircleButton1;
             this.guna2GradientCircleButton1.CustomImages.Parent = this.guna2GradientCircleButton1;
+            this.guna2GradientCircleButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2GradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientCircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientCircleButton1.HoverState.Parent = this.guna2GradientCircleButton1;
-            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(-56, -112);
+            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(-35, -118);
             this.guna2GradientCircleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientCircleButton1.Name = "guna2GradientCircleButton1";
             this.guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -191,42 +190,13 @@ namespace SuperMarketManagementSystem
             this.guna2GradientCircleButton1.Size = new System.Drawing.Size(590, 271);
             this.guna2GradientCircleButton1.TabIndex = 14;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Orchid;
-            this.label9.Font = new System.Drawing.Font("Algerian", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(153, 9);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(214, 49);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "RODOSTO";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Orchid;
-            this.label10.Font = new System.Drawing.Font("Algerian", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(94, 70);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(340, 49);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "SUPERMARKET";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(509, 545);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Controls.Add(this.ClearLabel);
             this.Controls.Add(this.LoginButton);
@@ -255,8 +225,6 @@ namespace SuperMarketManagementSystem
         private System.Windows.Forms.Label ClearLabel;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
     }
 }
 

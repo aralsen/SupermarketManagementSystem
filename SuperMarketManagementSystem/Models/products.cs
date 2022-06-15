@@ -12,10 +12,14 @@ namespace SuperMarketManagementSystem.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CategoryTable
+    public partial class products
     {
-        public int categoryID { get; set; }
-        public string categoryName { get; set; }
-        public string categoryDescription { get; set; }
+        public int product_id { get; set; }
+        public string product_name { get; set; }
+        public int stock { get; set; }
+        public int price { get; set; }
+        public int category_id { get; set; }
+    
+        public virtual categories categories { get; set; }
     }
 }

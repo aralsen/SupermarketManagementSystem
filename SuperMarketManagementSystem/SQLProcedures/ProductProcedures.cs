@@ -9,17 +9,17 @@ namespace SuperMarketManagementSystem.SQLProcedures
 {
     public class ProductProcedures
     {
-        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=SuperMarketDB;integrated security=True;MultipleActiveResultSets=True;");
+        private SqlConnection sqlConnection = new SqlConnection("data source=innovatist;initial catalog=managementDB;integrated security=True;MultipleActiveResultSets=True;");
 
-        public bool AddProduct(ProductTable product)
+        public bool AddProduct(products product)
         {
-            SqlCommand command = new SqlCommand("AddProduct", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_add_product", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@productID", product.productID);
-            command.Parameters.AddWithValue("@productName", product.productName);
-            command.Parameters.AddWithValue("@productQuantity", product.productQuantity);
-            command.Parameters.AddWithValue("@productPrice", product.productPrice);
-            command.Parameters.AddWithValue("@productCategory", product.productCategory);
+            command.Parameters.AddWithValue("@product_id", product.product_id);
+            command.Parameters.AddWithValue("@product_name", product.product_name);
+            command.Parameters.AddWithValue("@stock", product.stock);
+            command.Parameters.AddWithValue("@price", product.price);
+            command.Parameters.AddWithValue("@category_id", product.category_id);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -35,10 +35,25 @@ namespace SuperMarketManagementSystem.SQLProcedures
             }
         }
 
-        public List<ProductTable> GetAllProducts()
+        public DataTable GetCategoryID(String text)
         {
-            List<ProductTable> products = new List<ProductTable>();
-            SqlCommand command = new SqlCommand("DisplayAllProducts", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_category_id", sqlConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@category_name", text);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+
+            sqlConnection.Open();
+            dataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+
+            return dataTable;
+        }
+
+        public List<products> GetAllProducts()
+        {
+            List<products> products = new List<products>();
+            SqlCommand command = new SqlCommand("sp_display_products", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -48,13 +63,13 @@ namespace SuperMarketManagementSystem.SQLProcedures
             sqlConnection.Close();
 
             products = (from DataRow dataRow in dataTable.Rows
-                          select new ProductTable()
+                          select new products()
                           {
-                              productID = Convert.ToInt32(dataRow["productID"]),
-                              productName = Convert.ToString(dataRow["productName"]),
-                              productQuantity = Convert.ToInt32(dataRow["productQuantity"]),
-                              productPrice = Convert.ToInt32(dataRow["productPrice"]),
-                              productCategory = Convert.ToString(dataRow["productCategory"])
+                              product_id = Convert.ToInt32(dataRow["product_id"]),
+                              product_name = Convert.ToString(dataRow["product_name"]),
+                              stock = Convert.ToInt32(dataRow["stock"]),
+                              price = Convert.ToInt32(dataRow["price"]),
+                              category_id = Convert.ToInt32(dataRow["category_id"])
                           }).ToList();
 
             return products;
@@ -62,9 +77,9 @@ namespace SuperMarketManagementSystem.SQLProcedures
 
         public bool DeleteProduct(int id)
         {
-            SqlCommand command = new SqlCommand("DeleteProduct", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_delete_product", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@productID", id);
+            command.Parameters.AddWithValue("@product_id", id);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -80,15 +95,15 @@ namespace SuperMarketManagementSystem.SQLProcedures
             }
         }
 
-        public bool UpdateProduct(ProductTable product)
+        public bool UpdateProduct(products product)
         {
-            SqlCommand command = new SqlCommand("UpdateProduct", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_update_product", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@productID", product.productID);
-            command.Parameters.AddWithValue("@productName", product.productName);
-            command.Parameters.AddWithValue("@productQuantity", product.productQuantity);
-            command.Parameters.AddWithValue("@productPrice", product.productPrice);
-            command.Parameters.AddWithValue("@productCategory", product.productCategory);
+            command.Parameters.AddWithValue("@product_id", product.product_id);
+            command.Parameters.AddWithValue("@product_name", product.product_name);
+            command.Parameters.AddWithValue("@stock", product.stock);
+            command.Parameters.AddWithValue("@price", product.price);
+            command.Parameters.AddWithValue("@category_id", product.category_id);
 
             sqlConnection.Open();
             int error = command.ExecuteNonQuery();
@@ -107,7 +122,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
         public List<String> GetProductNames()
         {
             List<String> productNames = new List<String>();
-            SqlCommand command = new SqlCommand("GetProductNames", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_product_names", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -117,17 +132,17 @@ namespace SuperMarketManagementSystem.SQLProcedures
             sqlConnection.Close();
 
             productNames = (from DataRow dataRow in dataTable.Rows
-                             select dataRow["productName"].ToString()).ToList();
+                             select dataRow["product_name"].ToString()).ToList();
 
             return productNames;
         }
 
-        public List<ProductTable> GetProductsByCategory(String category)
+        public List<products> GetProductsByCategory(String category)
         {
-            List<ProductTable> products = new List<ProductTable>();
-            SqlCommand command = new SqlCommand("GetProductsByCategory", sqlConnection);
+            List<products> products = new List<products>();
+            SqlCommand command = new SqlCommand("sp_get_products_by_category", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@productCategory", category);
+            command.Parameters.AddWithValue("@category_name", category);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
 
@@ -136,13 +151,13 @@ namespace SuperMarketManagementSystem.SQLProcedures
             sqlConnection.Close();
 
             products = (from DataRow dataRow in dataTable.Rows
-                        select new ProductTable()
+                        select new products()
                         {
-                            productID = Convert.ToInt32(dataRow["productID"]),
-                            productName = Convert.ToString(dataRow["productName"]),
-                            productQuantity = Convert.ToInt32(dataRow["productQuantity"]),
-                            productPrice = Convert.ToInt32(dataRow["productPrice"]),
-                            productCategory = Convert.ToString(dataRow["productCategory"])
+                            product_id = Convert.ToInt32(dataRow["product_id"]),
+                            product_name = Convert.ToString(dataRow["product_name"]),
+                            stock = Convert.ToInt32(dataRow["stock"]),
+                            price = Convert.ToInt32(dataRow["price"]),
+                            category_id = Convert.ToInt32(dataRow["category_id"])
                         }).ToList();
 
             return products;
@@ -150,7 +165,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
 
         public DataTable GetProductNamePriceQuantity()
         {
-            SqlCommand command = new SqlCommand("GetPdNamePriceQuantity", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_product_namepricequantity", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -164,9 +179,9 @@ namespace SuperMarketManagementSystem.SQLProcedures
 
         public DataTable GetProductNamePriceQuantityByCategory(String category)
         {
-            SqlCommand command = new SqlCommand("GetPdNamePriceQuantityByCategory", sqlConnection);
+            SqlCommand command = new SqlCommand("sp_get_product_namepricequantity_by_category", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@categoryName", category);
+            command.Parameters.AddWithValue("@category_name", category);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
 

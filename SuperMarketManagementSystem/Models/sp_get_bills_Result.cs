@@ -10,14 +10,12 @@
 namespace SuperMarketManagementSystem.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class SellerTable
+    public partial class sp_get_bills_Result
     {
-        public int sellerID { get; set; }
-        public string sellerName { get; set; }
-        public int sellerAge { get; set; }
-        public string sellerPhone { get; set; }
-        public string sellerPassword { get; set; }
+        public int bill_id { get; set; }
+        public string name { get; set; }
+        public string bill_date { get; set; }
+        public int total_amount { get; set; }
     }
 }
