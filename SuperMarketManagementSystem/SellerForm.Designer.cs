@@ -32,6 +32,7 @@ namespace SuperMarketManagementSystem
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerForm));
             this.ClearPropertiesButton = new System.Windows.Forms.Button();
             this.SellerPasswordTextBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.SellerDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -55,7 +56,9 @@ namespace SuperMarketManagementSystem
             this.ManagersButton = new System.Windows.Forms.Button();
             this.EmailTextBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.SellerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ClearPropertiesButton
@@ -483,12 +486,24 @@ namespace SuperMarketManagementSystem
             this.label10.TabIndex = 57;
             this.label10.Text = "EMAIL";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
+            // 
             // SellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1325, 735);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.ManagersButton);
@@ -519,10 +534,12 @@ namespace SuperMarketManagementSystem
             this.Text = "SellerForm";
             this.Load += new System.EventHandler(this.SellerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SellerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
         private Guna.UI2.WinForms.Guna2DataGridView SellerDataGridView;

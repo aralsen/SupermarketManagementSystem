@@ -71,9 +71,11 @@ namespace SuperMarketManagementSystem
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BillDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SellingProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -129,10 +131,10 @@ namespace SuperMarketManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(938, 116);
+            this.label1.Location = new System.Drawing.Point(939, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 52);
+            this.label1.Size = new System.Drawing.Size(214, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "SELLING";
             // 
@@ -275,7 +277,7 @@ namespace SuperMarketManagementSystem
             this.BillDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.BillDataGridView.EnableHeadersVisualStyles = false;
             this.BillDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(171)))));
-            this.BillDataGridView.Location = new System.Drawing.Point(27, 624);
+            this.BillDataGridView.Location = new System.Drawing.Point(27, 613);
             this.BillDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.BillDataGridView.Name = "BillDataGridView";
             this.BillDataGridView.RowHeadersVisible = false;
@@ -311,9 +313,7 @@ namespace SuperMarketManagementSystem
             this.CategoryComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CategoryComboBox.ForeColor = System.Drawing.Color.Black;
             this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Items.AddRange(new object[] {
-            "ADMIN",
-            "SELLER"});
+            this.CategoryComboBox.Items.AddRange(new object[] { "ADMIN", "SELLER" });
             this.CategoryComboBox.Location = new System.Drawing.Point(812, 208);
             this.CategoryComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.CategoryComboBox.Name = "CategoryComboBox";
@@ -331,7 +331,7 @@ namespace SuperMarketManagementSystem
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.RefreshButton.ForeColor = System.Drawing.Color.Black;
-            this.RefreshButton.Location = new System.Drawing.Point(1111, 208);
+            this.RefreshButton.Location = new System.Drawing.Point(1137, 208);
             this.RefreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(152, 36);
@@ -451,7 +451,7 @@ namespace SuperMarketManagementSystem
             this.SellerNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.SellerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.SellerNameLabel.ForeColor = System.Drawing.Color.Black;
-            this.SellerNameLabel.Location = new System.Drawing.Point(189, 228);
+            this.SellerNameLabel.Location = new System.Drawing.Point(189, 156);
             this.SellerNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SellerNameLabel.Name = "SellerNameLabel";
             this.SellerNameLabel.Size = new System.Drawing.Size(77, 29);
@@ -481,7 +481,7 @@ namespace SuperMarketManagementSystem
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(323, 590);
+            this.label5.Location = new System.Drawing.Point(329, 580);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 29);
@@ -494,10 +494,10 @@ namespace SuperMarketManagementSystem
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(220, 525);
+            this.label6.Location = new System.Drawing.Point(225, 510);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 36);
+            this.label6.Size = new System.Drawing.Size(161, 29);
             this.label6.TabIndex = 25;
             this.label6.Text = "Total Amount:";
             // 
@@ -507,7 +507,7 @@ namespace SuperMarketManagementSystem
             this.ResultLabel.BackColor = System.Drawing.Color.Transparent;
             this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.ResultLabel.ForeColor = System.Drawing.Color.Black;
-            this.ResultLabel.Location = new System.Drawing.Point(446, 525);
+            this.ResultLabel.Location = new System.Drawing.Point(421, 510);
             this.ResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.Size = new System.Drawing.Size(81, 29);
@@ -532,12 +532,7 @@ namespace SuperMarketManagementSystem
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.OrderDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.OrderDataGridView.ColumnHeadersHeight = 30;
-            this.OrderDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.ProductName,
-            this.Price,
-            this.Quantity,
-            this.Total});
+            this.OrderDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.ID, this.ProductName, this.Price, this.Quantity, this.Total });
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(235)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -548,13 +543,13 @@ namespace SuperMarketManagementSystem
             this.OrderDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
             this.OrderDataGridView.EnableHeadersVisualStyles = false;
             this.OrderDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(171)))));
-            this.OrderDataGridView.Location = new System.Drawing.Point(27, 274);
+            this.OrderDataGridView.Location = new System.Drawing.Point(27, 208);
             this.OrderDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.OrderDataGridView.Name = "OrderDataGridView";
             this.OrderDataGridView.RowHeadersVisible = false;
             this.OrderDataGridView.RowHeadersWidth = 51;
             this.OrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderDataGridView.Size = new System.Drawing.Size(745, 247);
+            this.OrderDataGridView.Size = new System.Drawing.Size(745, 288);
             this.OrderDataGridView.TabIndex = 27;
             this.OrderDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Orange;
             this.OrderDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(225)))), ((int)(((byte)(184)))));
@@ -631,12 +626,23 @@ namespace SuperMarketManagementSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(21, 221);
+            this.label11.Location = new System.Drawing.Point(27, 156);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(146, 36);
             this.label11.TabIndex = 32;
             this.label11.Text = "SELLER:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
             // 
             // SellingForm
             // 
@@ -644,6 +650,7 @@ namespace SuperMarketManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1325, 868);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.label7);
@@ -679,10 +686,12 @@ namespace SuperMarketManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.BillDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SellingProductDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
         private System.Windows.Forms.Button ExitButton;

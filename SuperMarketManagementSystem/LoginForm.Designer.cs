@@ -39,6 +39,8 @@ namespace SuperMarketManagementSystem
             this.ClearLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // UserNameTextBox
@@ -110,9 +112,7 @@ namespace SuperMarketManagementSystem
             this.RoleComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoleComboBox.ForeColor = System.Drawing.Color.Black;
             this.RoleComboBox.FormattingEnabled = true;
-            this.RoleComboBox.Items.AddRange(new object[] {
-            "MANAGER",
-            "SELLER"});
+            this.RoleComboBox.Items.AddRange(new object[] { "MANAGER", "SELLER" });
             this.RoleComboBox.Location = new System.Drawing.Point(123, 229);
             this.RoleComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.RoleComboBox.Name = "RoleComboBox";
@@ -169,7 +169,7 @@ namespace SuperMarketManagementSystem
             this.label8.Location = new System.Drawing.Point(481, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 32);
+            this.label8.Size = new System.Drawing.Size(30, 32);
             this.label8.TabIndex = 13;
             this.label8.Text = "x";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -190,12 +190,24 @@ namespace SuperMarketManagementSystem
             this.guna2GradientCircleButton1.Size = new System.Drawing.Size(590, 271);
             this.guna2GradientCircleButton1.TabIndex = 14;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(156, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(509, 545);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Controls.Add(this.ClearLabel);
@@ -210,10 +222,12 @@ namespace SuperMarketManagementSystem
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
         private Bunifu.Framework.UI.BunifuMaterialTextbox UserNameTextBox;

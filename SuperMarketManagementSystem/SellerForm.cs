@@ -100,6 +100,7 @@ namespace SuperMarketManagementSystem
                     seller.phone = SellerPhoneTextBox.Text;
                     seller.password = SellerPasswordTextBox.Text;
                     seller.email = EmailTextBox.Text;
+                    seller.job_id = 2;
 
                     SellerSqlProcedures.UpdateEmployee(seller);
                     MessageBox.Show("Seller successfully updated");
