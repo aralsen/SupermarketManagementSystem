@@ -77,24 +77,6 @@ namespace SuperMarketManagementSystem
                 printDocument1.Print();
             }
         }
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawString("RODOSTO SUPERMARKET", new Font("Centry Gothic", 25, FontStyle.Bold), Brushes.Red, new Point(230));
-            
-            e.Graphics.DrawString("Bill ID: " + BillDataGridView.SelectedRows[0].Cells[0].Value.ToString(), 
-                                    new Font("Centry Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(100, 70));
-
-            e.Graphics.DrawString("Seller Name: " + SellerNameLabel.Text,
-                                    new Font("Centry Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(100, 100));
-
-            e.Graphics.DrawString("Date: " + BillDataGridView.SelectedRows[0].Cells[2].Value.ToString(),
-                                    new Font("Centry Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(100, 130));
-
-            e.Graphics.DrawString("Total Amount: " + BillDataGridView.SelectedRows[0].Cells[3].Value.ToString(),
-                                    new Font("Centry Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(100, 160));
-        }
-
         private void CategoryComboBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String category = CategoryComboBox.SelectedItem.ToString();
