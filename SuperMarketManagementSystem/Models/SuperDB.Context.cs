@@ -320,13 +320,13 @@ namespace SuperMarketManagementSystem.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_get_category_id", category_nameParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> sp_get_employee_id(string name)
+        public virtual ObjectResult<Nullable<int>> sp_get_employee_id(string email)
         {
-            var nameParameter = name != null ?
-                new ObjectParameter("name", name) :
-                new ObjectParameter("name", typeof(string));
+            var emailParameter = email != null ?
+                new ObjectParameter("email", email) :
+                new ObjectParameter("email", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_get_employee_id", nameParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_get_employee_id", emailParameter);
         }
     }
 }

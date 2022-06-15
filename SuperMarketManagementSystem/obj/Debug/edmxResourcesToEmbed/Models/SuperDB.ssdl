@@ -134,6 +134,9 @@
     <Parameter Name="email" Type="nvarchar" Mode="In" />
     <Parameter Name="password" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="sp_get_employee_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="sp_get_product_namepricequantity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="sp_get_product_namepricequantity_by_category" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="category_name" Type="varchar" Mode="In" />

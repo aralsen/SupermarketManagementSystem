@@ -187,6 +187,9 @@
     <FunctionImport Name="sp_get_category_id" ReturnType="Collection(Int32)">
       <Parameter Name="category_name" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_get_employee_id" ReturnType="Collection(Int32)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_display_categories_Result">
     <Property Type="Int32" Name="category_id" Nullable="false" />

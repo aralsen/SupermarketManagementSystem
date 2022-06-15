@@ -140,7 +140,7 @@ namespace SuperMarketManagementSystem.SQLProcedures
         {
             SqlCommand command = new SqlCommand("sp_get_employee_id", sqlConnection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@name", text);
+            command.Parameters.AddWithValue("@email", text);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
 

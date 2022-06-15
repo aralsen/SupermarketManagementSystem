@@ -152,5 +152,6 @@
     <FunctionImportMapping FunctionImportName="sp_update_employee" FunctionName="managementDBModel.Store.sp_update_employee" />
     <FunctionImportMapping FunctionImportName="sp_update_product" FunctionName="managementDBModel.Store.sp_update_product" />
     <FunctionImportMapping FunctionImportName="sp_get_category_id" FunctionName="managementDBModel.Store.sp_get_category_id" />
+    <FunctionImportMapping FunctionImportName="sp_get_employee_id" FunctionName="managementDBModel.Store.sp_get_employee_id" />
   </EntityContainerMapping>
 </Mapping>
