@@ -16,6 +16,7 @@ namespace SuperMarketManagementSystem
         private ProductProcedures ProductSqlProcedure = new ProductProcedures();
         private CategoryProcedures CategorySqlProcedure = new CategoryProcedures();
         private BillProcedures BillSqlProcedure = new BillProcedures();
+        private EmployeeProcedures EmployeeSqlProcedure = new EmployeeProcedures();
 
         private void SellingForm_Load(object sender, EventArgs e)
         {
@@ -49,11 +50,11 @@ namespace SuperMarketManagementSystem
             {
                 try
                 {
-                    BillTable bill = new BillTable();
-                    bill.billID = int.Parse(BillIDTextBox.Text);
-                    bill.sellerName = SellerNameLabel.Text;
-                    bill.billDate = DateLabel.Text;
-                    bill.totalAmount = int.Parse(ResultLabel.Text);
+                    bills bill = new bills();
+                    bill.bill_id = int.Parse(BillIDTextBox.Text);
+                    bill.employee_id = int.Parse(EmployeeSqlProcedure.GetEmployeeID(SellerNameLabel.Text).Rows[0][0].ToString());
+                    bill.bill_date = DateLabel.Text;
+                    bill.total_amount = int.Parse(ResultLabel.Text);
 
                     BillSqlProcedure.AddBill(bill);
                     MessageBox.Show("Order added successfully");

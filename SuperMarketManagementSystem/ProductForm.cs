@@ -50,12 +50,12 @@ namespace SuperMarketManagementSystem
         {
             try
             {
-                ProductTable product = new ProductTable();
-                product.productID = int.Parse(ProductIDTextBox.Text);
-                product.productName = ProductNameTextBox.Text;
-                product.productCategory = CategoryComboBox1.SelectedValue.ToString();
-                product.productQuantity = int.Parse(ProductQuantityTextBox.Text);
-                product.productPrice = int.Parse(ProductPriceTextBox.Text);
+                products product = new products();
+                product.product_id = int.Parse(ProductIDTextBox.Text);
+                product.product_name = ProductNameTextBox.Text;
+                product.category_id = int.Parse(ProductSqlProcedure.GetCategoryID(CategoryComboBox1.SelectedValue.ToString()).Rows[0][0].ToString());
+                product.stock = int.Parse(ProductQuantityTextBox.Text);
+                product.price = int.Parse(ProductPriceTextBox.Text);
 
                 ProductSqlProcedure.AddProduct(product);
                 MessageBox.Show("Product added successfully");
@@ -107,12 +107,12 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    ProductTable product = new ProductTable();
-                    product.productID = int.Parse(ProductIDTextBox.Text);
-                    product.productName = ProductNameTextBox.Text;
-                    product.productQuantity = int.Parse(ProductQuantityTextBox.Text);
-                    product.productPrice = int.Parse(ProductPriceTextBox.Text);
-                    product.productCategory = CategoryComboBox1.SelectedValue.ToString();
+                    products product = new products();
+                    product.product_id = int.Parse(ProductIDTextBox.Text);
+                    product.product_name = ProductNameTextBox.Text;
+                    product.stock = int.Parse(ProductQuantityTextBox.Text);
+                    product.price = int.Parse(ProductPriceTextBox.Text);
+                    product.category_id = int.Parse(ProductSqlProcedure.GetCategoryID(CategoryComboBox1.SelectedValue.ToString()).Rows[0][0].ToString());
 
                     ProductSqlProcedure.UpdateProduct(product);
                     MessageBox.Show("Product successfully updated");

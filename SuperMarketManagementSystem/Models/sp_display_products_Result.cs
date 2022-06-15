@@ -10,14 +10,13 @@
 namespace SuperMarketManagementSystem.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ProductTable
+    public partial class sp_display_products_Result
     {
-        public int productID { get; set; }
-        public string productName { get; set; }
-        public int productQuantity { get; set; }
-        public int productPrice { get; set; }
-        public string productCategory { get; set; }
+        public int product_id { get; set; }
+        public string product_name { get; set; }
+        public int stock { get; set; }
+        public int price { get; set; }
+        public int category_id { get; set; }
     }
 }

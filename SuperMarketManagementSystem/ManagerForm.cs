@@ -19,7 +19,7 @@ namespace SuperMarketManagementSystem
             InitializeComponent();
         }
 
-        private ManagerProcedure ManagerSqlProcedure = new ManagerProcedure();
+        private EmployeeProcedures ManagerSqlProcedure = new EmployeeProcedures();
 
         private void ClearTextBoxes()
         {
@@ -59,7 +59,7 @@ namespace SuperMarketManagementSystem
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-            ManagerDataGridView.DataSource = ManagerSqlProcedure.DisplayAllManagers();
+            ManagerDataGridView.DataSource = ManagerSqlProcedure.GetAllManagers();
             ClearTextBoxes();
         }
 
@@ -77,15 +77,16 @@ namespace SuperMarketManagementSystem
         {
             try
             {
-                ManagerTable manager = new ManagerTable();
-                manager.managerID = int.Parse(IDTextBox.Text);
-                manager.managerName = NameTextBox.Text;
-                manager.managerAge = int.Parse(AgeTextBox.Text);
-                manager.managerPhone = PhoneTextBox.Text;
-                manager.managerPassword = PasswordTextBox.Text;
-                manager.managerAddress = AddressTextBox.Text;
+                employees manager = new employees();
+                manager.employee_id = int.Parse(IDTextBox.Text);
+                manager.name = NameTextBox.Text;
+                manager.age = int.Parse(AgeTextBox.Text);
+                manager.phone = PhoneTextBox.Text;
+                manager.password = PasswordTextBox.Text;
+                manager.email = AddressTextBox.Text;
+                manager.job_id = 1;
 
-                ManagerSqlProcedure.AddManger(manager);
+                ManagerSqlProcedure.AddEmployee(manager);
                 MessageBox.Show("Manager added successfully");
                 ManagerForm_Load(sender, e);
             }
@@ -106,15 +107,16 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    ManagerTable manager = new ManagerTable();
-                    manager.managerID = int.Parse(IDTextBox.Text);
-                    manager.managerName = NameTextBox.Text;
-                    manager.managerAge = int.Parse(AgeTextBox.Text);
-                    manager.managerPhone = PhoneTextBox.Text;
-                    manager.managerPassword = PasswordTextBox.Text;
-                    manager.managerAddress = AddressTextBox.Text;
+                    employees manager = new employees();
+                    manager.employee_id = int.Parse(IDTextBox.Text);
+                    manager.name = NameTextBox.Text;
+                    manager.age = int.Parse(AgeTextBox.Text);
+                    manager.phone = PhoneTextBox.Text;
+                    manager.password = PasswordTextBox.Text;
+                    manager.email = AddressTextBox.Text;
+                    manager.job_id = 1;
 
-                    ManagerSqlProcedure.UpdateManager(manager);
+                    ManagerSqlProcedure.UpdateEmployee(manager);
                     MessageBox.Show("Manager successfully updated");
                     ManagerForm_Load(sender, e);
                 }
@@ -135,7 +137,7 @@ namespace SuperMarketManagementSystem
                 }
                 else
                 {
-                    ManagerSqlProcedure.DeleteManger(int.Parse(IDTextBox.Text));
+                    ManagerSqlProcedure.DeleteEmployee(int.Parse(IDTextBox.Text));
                     MessageBox.Show("Manager deleted successfully!");
                     ManagerForm_Load(sender, e);
                 }

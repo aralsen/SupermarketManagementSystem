@@ -48,7 +48,7 @@ namespace SuperMarketManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("You are not a Manager or please type correc Username and Password!");
+                            MessageBox.Show("You are not a Manager or please type correct Username and Password!");
                         }
                     }
                     else

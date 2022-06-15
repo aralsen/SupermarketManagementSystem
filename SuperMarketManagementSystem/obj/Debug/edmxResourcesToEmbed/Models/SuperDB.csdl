@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="managementDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bills">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="Int32" Nullable="false" />
+    <Property Name="employee_id" Type="Int32" Nullable="false" />
+    <Property Name="bill_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="total_amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="employees" Relationship="Self.FK__bills__employee___2F10007B" FromRole="bills" ToRole="employees" />
+  </EntityType>
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="products" Relationship="Self.FK__products__catego__2C3393D0" FromRole="categories" ToRole="products" />
+  </EntityType>
+  <EntityType Name="employees">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="14" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="job_id" Type="Int32" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="bills" Relationship="Self.FK__bills__employee___2F10007B" FromRole="employees" ToRole="bills" />
+    <NavigationProperty Name="job_types" Relationship="Self.FK__employees__job_i__276EDEB3" FromRole="employees" ToRole="job_types" />
+  </EntityType>
+  <EntityType Name="job_types">
+    <Key>
+      <PropertyRef Name="job_id" />
+    </Key>
+    <Property Name="job_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="employees" Relationship="Self.FK__employees__job_i__276EDEB3" FromRole="job_types" ToRole="employees" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="product_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="categories" Relationship="Self.FK__products__catego__2C3393D0" FromRole="products" ToRole="categories" />
+  </EntityType>
+  <Association Name="FK__bills__employee___2F10007B">
+    <End Role="employees" Type="Self.employees" Multiplicity="1" />
+    <End Role="bills" Type="Self.bills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employees">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="bills">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__products__catego__2C3393D0">
+    <End Role="categories" Type="Self.categories" Multiplicity="1" />
+    <End Role="products" Type="Self.products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories">
+        <PropertyRef Name="category_id" />
+      </Principal>
+      <Dependent Role="products">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__employees__job_i__276EDEB3">
+    <End Role="job_types" Type="Self.job_types" Multiplicity="1" />
+    <End Role="employees" Type="Self.employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_types">
+        <PropertyRef Name="job_id" />
+      </Principal>
+      <Dependent Role="employees">
+        <PropertyRef Name="job_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="managementDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bills" EntityType="Self.bills" />
+    <EntitySet Name="categories" EntityType="Self.categories" />
+    <EntitySet Name="employees" EntityType="Self.employees" />
+    <EntitySet Name="job_types" EntityType="Self.job_types" />
+    <EntitySet Name="products" EntityType="Self.products" />
+    <AssociationSet Name="FK__bills__employee___2F10007B" Association="Self.FK__bills__employee___2F10007B">
+      <End Role="employees" EntitySet="employees" />
+      <End Role="bills" EntitySet="bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__products__catego__2C3393D0" Association="Self.FK__products__catego__2C3393D0">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="products" EntitySet="products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__employees__job_i__276EDEB3" Association="Self.FK__employees__job_i__276EDEB3">
+      <End Role="job_types" EntitySet="job_types" />
+      <End Role="employees" EntitySet="employees" />
+    </AssociationSet>
+    <FunctionImport Name="sp_add_bill">
+      <Parameter Name="bill_id" Mode="In" Type="Int32" />
+      <Parameter Name="employee_id" Mode="In" Type="Int32" />
+      <Parameter Name="bill_date" Mode="In" Type="String" />
+      <Parameter Name="total_amount" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_category">
+      <Parameter Name="category_id" Mode="In" Type="Int32" />
+      <Parameter Name="category_name" Mode="In" Type="String" />
+      <Parameter Name="description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_employee">
+      <Parameter Name="employee_id" Mode="In" Type="Int32" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="age" Mode="In" Type="Int32" />
+      <Parameter Name="job_id" Mode="In" Type="Int32" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_product">
+      <Parameter Name="product_id" Mode="In" Type="Int32" />
+      <Parameter Name="product_name" Mode="In" Type="String" />
+      <Parameter Name="stock" Mode="In" Type="Int32" />
+      <Parameter Name="price" Mode="In" Type="Int32" />
+      <Parameter Name="category_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delete_bill">
+      <Parameter Name="bill_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delete_category">
+      <Parameter Name="category_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delete_employee">
+      <Parameter Name="employee_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delete_product">
+      <Parameter Name="product_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_display_categories" ReturnType="Collection(managementDBModel.sp_display_categories_Result)" />
+    <FunctionImport Name="sp_display_managers" ReturnType="Collection(managementDBModel.sp_display_managers_Result)" />
+    <FunctionImport Name="sp_display_products" ReturnType="Collection(managementDBModel.sp_display_products_Result)" />
+    <FunctionImport Name="sp_display_salespersons" ReturnType="Collection(managementDBModel.sp_display_salespersons_Result)" />
+    <FunctionImport Name="sp_get_bills" ReturnType="Collection(managementDBModel.sp_get_bills_Result)" />
+    <FunctionImport Name="sp_get_category_names" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_get_employee" ReturnType="Collection(Int32)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_get_product_namepricequantity" ReturnType="Collection(managementDBModel.sp_get_product_namepricequantity_Result)" />
+    <FunctionImport Name="sp_get_product_namepricequantity_by_category" ReturnType="Collection(managementDBModel.sp_get_product_namepricequantity_by_category_Result)">
+      <Parameter Name="category_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_get_product_names" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_get_products_by_category" ReturnType="Collection(managementDBModel.sp_get_products_by_category_Result)">
+      <Parameter Name="category_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_update_category">
+      <Parameter Name="category_id" Mode="In" Type="Int32" />
+      <Parameter Name="category_name" Mode="In" Type="String" />
+      <Parameter Name="description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_update_employee">
+      <Parameter Name="employee_id" Mode="In" Type="Int32" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="age" Mode="In" Type="Int32" />
+      <Parameter Name="job_id" Mode="In" Type="Int32" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_update_product">
+      <Parameter Name="product_id" Mode="In" Type="Int32" />
+      <Parameter Name="product_name" Mode="In" Type="String" />
+      <Parameter Name="stock" Mode="In" Type="Int32" />
+      <Parameter Name="price" Mode="In" Type="Int32" />
+      <Parameter Name="category_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_get_category_id" ReturnType="Collection(Int32)">
+      <Parameter Name="category_name" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_display_categories_Result">
+    <Property Type="Int32" Name="category_id" Nullable="false" />
+    <Property Type="String" Name="category_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_display_managers_Result">
+    <Property Type="Int32" Name="employee_id" Nullable="false" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="phone" Nullable="false" MaxLength="14" />
+    <Property Type="Int32" Name="age" Nullable="false" />
+    <Property Type="Int32" Name="job_id" Nullable="false" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_display_products_Result">
+    <Property Type="Int32" Name="product_id" Nullable="false" />
+    <Property Type="String" Name="product_name" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="stock" Nullable="false" />
+    <Property Type="Int32" Name="price" Nullable="false" />
+    <Property Type="Int32" Name="category_id" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_display_salespersons_Result">
+    <Property Type="Int32" Name="employee_id" Nullable="false" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="phone" Nullable="false" MaxLength="14" />
+    <Property Type="Int32" Name="age" Nullable="false" />
+    <Property Type="Int32" Name="job_id" Nullable="false" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_get_bills_Result">
+    <Property Type="Int32" Name="bill_id" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="bill_date" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="total_amount" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_get_product_namepricequantity_Result">
+    <Property Type="String" Name="product_name" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="price" Nullable="false" />
+    <Property Type="Int32" Name="stock" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_get_product_namepricequantity_by_category_Result">
+    <Property Type="String" Name="product_name" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="price" Nullable="false" />
+    <Property Type="Int32" Name="stock" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_get_products_by_category_Result">
+    <Property Type="Int32" Name="product_id" Nullable="false" />
+    <Property Type="String" Name="product_name" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="stock" Nullable="false" />
+    <Property Type="Int32" Name="price" Nullable="false" />
+    <Property Type="String" Name="category_name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>

@@ -10,13 +10,15 @@
 namespace SuperMarketManagementSystem.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class BillTable
+    public partial class sp_display_managers_Result
     {
-        public int billID { get; set; }
-        public string sellerName { get; set; }
-        public string billDate { get; set; }
-        public int totalAmount { get; set; }
+        public int employee_id { get; set; }
+        public string email { get; set; }
+        public string name { get; set; }
+        public string phone { get; set; }
+        public int age { get; set; }
+        public int job_id { get; set; }
+        public string password { get; set; }
     }
 }

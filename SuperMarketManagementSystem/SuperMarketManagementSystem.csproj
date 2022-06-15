@@ -80,35 +80,59 @@
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BillTable.cs">
-      <DependentUpon>SuperMarketDataModel.tt</DependentUpon>
+    <Compile Include="Models\bills.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CategoryTable.cs">
-      <DependentUpon>SuperMarketDataModel.tt</DependentUpon>
+    <Compile Include="Models\categories.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ManagerTable.cs">
-      <DependentUpon>SuperMarketDataModel.tt</DependentUpon>
+    <Compile Include="Models\employees.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProductTable.cs">
-      <DependentUpon>SuperMarketDataModel.tt</DependentUpon>
+    <Compile Include="Models\job_types.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SellerTable.cs">
-      <DependentUpon>SuperMarketDataModel.tt</DependentUpon>
+    <Compile Include="Models\products.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SuperMarketDataModel.Context.cs">
+    <Compile Include="Models\sp_display_categories_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_display_managers_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_display_products_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_display_salespersons_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_get_bills_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_get_products_by_category_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_get_product_namepricequantity_by_category_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_get_product_namepricequantity_Result.cs">
+      <DependentUpon>SuperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SuperDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SuperMarketDataModel.Context.tt</DependentUpon>
+      <DependentUpon>SuperDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SuperMarketDataModel.cs">
+    <Compile Include="Models\SuperDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SuperMarketDataModel.tt</DependentUpon>
+      <DependentUpon>SuperDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SuperMarketDataModel.Designer.cs">
+    <Compile Include="Models\SuperDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SuperMarketDataModel.edmx</DependentUpon>
+      <DependentUpon>SuperDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="ProductForm.cs">
       <SubType>Form</SubType>
@@ -139,8 +163,7 @@
     <Compile Include="SQLProcedures\BillProcedures.cs" />
     <Compile Include="SQLProcedures\CategoryProcedures.cs" />
     <Compile Include="SQLProcedures\LoginProcedures.cs" />
-    <Compile Include="SQLProcedures\ManagerProcedure.cs" />
-    <Compile Include="SQLProcedures\SellerProcedures.cs" />
+    <Compile Include="SQLProcedures\EmployeeProcedures.cs" />
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,12 +194,12 @@
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\SuperMarketDataModel.edmx">
+    <EntityDeploy Include="Models\SuperDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SuperMarketDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SuperDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\SuperMarketDataModel.edmx.diagram">
-      <DependentUpon>SuperMarketDataModel.edmx</DependentUpon>
+    <None Include="Models\SuperDB.edmx.diagram">
+      <DependentUpon>SuperDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -198,15 +221,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Models\SuperMarketDataModel.Context.tt">
+    <Content Include="Models\SuperDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SuperMarketDataModel.edmx</DependentUpon>
-      <LastGenOutput>SuperMarketDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>SuperDB.edmx</DependentUpon>
+      <LastGenOutput>SuperDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\SuperMarketDataModel.tt">
+    <Content Include="Models\SuperDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SuperMarketDataModel.edmx</DependentUpon>
-      <LastGenOutput>SuperMarketDataModel.cs</LastGenOutput>
+      <DependentUpon>SuperDB.edmx</DependentUpon>
+      <LastGenOutput>SuperDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
