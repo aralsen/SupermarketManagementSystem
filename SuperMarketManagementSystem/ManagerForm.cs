@@ -28,7 +28,7 @@ namespace SuperMarketManagementSystem
             AgeTextBox.Text = "";
             PhoneTextBox.Text = "";
             PasswordTextBox.Text = "";
-            AddressTextBox.Text = "";
+            EmailTextBox.Text = "";
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -66,11 +66,11 @@ namespace SuperMarketManagementSystem
         private void ManagerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             IDTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            NameTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            AgeTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            NameTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            AgeTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
             PhoneTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[3].Value.ToString();
-            PasswordTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[5].Value.ToString();
-            AddressTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+            EmailTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            PasswordTextBox.Text = ManagerDataGridView.SelectedRows[0].Cells[6].Value.ToString();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace SuperMarketManagementSystem
                 manager.age = int.Parse(AgeTextBox.Text);
                 manager.phone = PhoneTextBox.Text;
                 manager.password = PasswordTextBox.Text;
-                manager.email = AddressTextBox.Text;
+                manager.email = EmailTextBox.Text;
                 manager.job_id = 1;
 
                 ManagerSqlProcedure.AddEmployee(manager);
@@ -113,7 +113,7 @@ namespace SuperMarketManagementSystem
                     manager.age = int.Parse(AgeTextBox.Text);
                     manager.phone = PhoneTextBox.Text;
                     manager.password = PasswordTextBox.Text;
-                    manager.email = AddressTextBox.Text;
+                    manager.email = EmailTextBox.Text;
                     manager.job_id = 1;
 
                     ManagerSqlProcedure.UpdateEmployee(manager);

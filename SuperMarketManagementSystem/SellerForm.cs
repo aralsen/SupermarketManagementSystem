@@ -21,6 +21,7 @@ namespace SuperMarketManagementSystem
             SellerAgeTextBox.Text = "";
             SellerPhoneTextBox.Text = "";
             SellerPasswordTextBox.Text = "";
+            EmailTextBox.Text = "";
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -51,10 +52,11 @@ namespace SuperMarketManagementSystem
         private void SellerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             SellerIDTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            SellerNameTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            SellerAgeTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            SellerNameTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            SellerAgeTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
             SellerPhoneTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[3].Value.ToString();
-            SellerPasswordTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+            SellerPasswordTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[6].Value.ToString();
+            EmailTextBox.Text = SellerDataGridView.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -67,6 +69,7 @@ namespace SuperMarketManagementSystem
                 seller.age = int.Parse(SellerAgeTextBox.Text);
                 seller.phone = SellerPhoneTextBox.Text;
                 seller.password = SellerPasswordTextBox.Text;
+                seller.email = EmailTextBox.Text;
                 seller.job_id = 2;
 
                 SellerSqlProcedures.AddEmployee(seller);
@@ -96,6 +99,7 @@ namespace SuperMarketManagementSystem
                     seller.age = int.Parse(SellerAgeTextBox.Text);
                     seller.phone = SellerPhoneTextBox.Text;
                     seller.password = SellerPasswordTextBox.Text;
+                    seller.email = EmailTextBox.Text;
 
                     SellerSqlProcedures.UpdateEmployee(seller);
                     MessageBox.Show("Seller successfully updated");
