@@ -54,7 +54,7 @@ namespace SuperMarketManagementSystem
             // 
             // ProductsButton
             // 
-            this.ProductsButton.BackColor = System.Drawing.Color.Transparent;
+            this.ProductsButton.BackColor = System.Drawing.Color.Goldenrod;
             this.ProductsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductsButton.FlatAppearance.BorderSize = 0;
             this.ProductsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
@@ -62,10 +62,10 @@ namespace SuperMarketManagementSystem
             this.ProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProductsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductsButton.ForeColor = System.Drawing.Color.Black;
-            this.ProductsButton.Location = new System.Drawing.Point(755, 31);
+            this.ProductsButton.Location = new System.Drawing.Point(755, 13);
             this.ProductsButton.Margin = new System.Windows.Forms.Padding(4);
             this.ProductsButton.Name = "ProductsButton";
-            this.ProductsButton.Size = new System.Drawing.Size(148, 39);
+            this.ProductsButton.Size = new System.Drawing.Size(148, 57);
             this.ProductsButton.TabIndex = 5;
             this.ProductsButton.Text = "Products";
             this.ProductsButton.UseVisualStyleBackColor = false;
@@ -73,7 +73,7 @@ namespace SuperMarketManagementSystem
             // 
             // SellersButton
             // 
-            this.SellersButton.BackColor = System.Drawing.Color.Transparent;
+            this.SellersButton.BackColor = System.Drawing.Color.Goldenrod;
             this.SellersButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SellersButton.FlatAppearance.BorderSize = 0;
             this.SellersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
@@ -81,10 +81,10 @@ namespace SuperMarketManagementSystem
             this.SellersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SellersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SellersButton.ForeColor = System.Drawing.Color.Black;
-            this.SellersButton.Location = new System.Drawing.Point(585, 31);
+            this.SellersButton.Location = new System.Drawing.Point(585, 13);
             this.SellersButton.Margin = new System.Windows.Forms.Padding(4);
             this.SellersButton.Name = "SellersButton";
-            this.SellersButton.Size = new System.Drawing.Size(133, 39);
+            this.SellersButton.Size = new System.Drawing.Size(133, 57);
             this.SellersButton.TabIndex = 4;
             this.SellersButton.Text = "Sellers";
             this.SellersButton.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@ namespace SuperMarketManagementSystem
             this.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.ForeColor = System.Drawing.Color.Bisque;
+            this.ExitButton.ForeColor = System.Drawing.Color.Black;
             this.ExitButton.Location = new System.Drawing.Point(1295, -6);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExitButton.Name = "ExitButton";
@@ -116,7 +116,7 @@ namespace SuperMarketManagementSystem
             this.LogoutLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutLabel.ForeColor = System.Drawing.Color.Black;
-            this.LogoutLabel.Location = new System.Drawing.Point(1197, 39);
+            this.LogoutLabel.Location = new System.Drawing.Point(1200, -3);
             this.LogoutLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogoutLabel.Name = "LogoutLabel";
             this.LogoutLabel.Size = new System.Drawing.Size(87, 29);
@@ -130,7 +130,7 @@ namespace SuperMarketManagementSystem
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(51, 241);
+            this.label2.Location = new System.Drawing.Point(857, 241);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 25);
@@ -150,7 +150,7 @@ namespace SuperMarketManagementSystem
             this.CategoryIDTextBox.LineIdleColor = System.Drawing.Color.Black;
             this.CategoryIDTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.CategoryIDTextBox.LineThickness = 4;
-            this.CategoryIDTextBox.Location = new System.Drawing.Point(249, 231);
+            this.CategoryIDTextBox.Location = new System.Drawing.Point(1055, 231);
             this.CategoryIDTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CategoryIDTextBox.Name = "CategoryIDTextBox";
             this.CategoryIDTextBox.Size = new System.Drawing.Size(209, 34);
@@ -163,7 +163,7 @@ namespace SuperMarketManagementSystem
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(51, 316);
+            this.label3.Location = new System.Drawing.Point(857, 316);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 25);
@@ -183,7 +183,7 @@ namespace SuperMarketManagementSystem
             this.CategoryNameTextBox.LineIdleColor = System.Drawing.Color.Black;
             this.CategoryNameTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.CategoryNameTextBox.LineThickness = 4;
-            this.CategoryNameTextBox.Location = new System.Drawing.Point(249, 306);
+            this.CategoryNameTextBox.Location = new System.Drawing.Point(1055, 306);
             this.CategoryNameTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CategoryNameTextBox.Name = "CategoryNameTextBox";
             this.CategoryNameTextBox.Size = new System.Drawing.Size(209, 34);
@@ -196,7 +196,7 @@ namespace SuperMarketManagementSystem
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(51, 382);
+            this.label4.Location = new System.Drawing.Point(857, 382);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 25);
@@ -216,7 +216,7 @@ namespace SuperMarketManagementSystem
             this.CategoryDescriptionTextBox.LineIdleColor = System.Drawing.Color.Black;
             this.CategoryDescriptionTextBox.LineMouseHoverColor = System.Drawing.Color.Yellow;
             this.CategoryDescriptionTextBox.LineThickness = 4;
-            this.CategoryDescriptionTextBox.Location = new System.Drawing.Point(249, 372);
+            this.CategoryDescriptionTextBox.Location = new System.Drawing.Point(1055, 372);
             this.CategoryDescriptionTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CategoryDescriptionTextBox.Name = "CategoryDescriptionTextBox";
             this.CategoryDescriptionTextBox.Size = new System.Drawing.Size(209, 34);
@@ -230,7 +230,7 @@ namespace SuperMarketManagementSystem
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(48, 175);
+            this.label1.Location = new System.Drawing.Point(848, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(416, 39);
@@ -247,7 +247,7 @@ namespace SuperMarketManagementSystem
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.Black;
-            this.AddButton.Location = new System.Drawing.Point(85, 458);
+            this.AddButton.Location = new System.Drawing.Point(890, 495);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(107, 39);
@@ -266,7 +266,7 @@ namespace SuperMarketManagementSystem
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.ForeColor = System.Drawing.Color.Black;
-            this.EditButton.Location = new System.Drawing.Point(285, 458);
+            this.EditButton.Location = new System.Drawing.Point(1142, 495);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(112, 39);
@@ -285,7 +285,7 @@ namespace SuperMarketManagementSystem
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.Color.Black;
-            this.DeleteButton.Location = new System.Drawing.Point(161, 527);
+            this.DeleteButton.Location = new System.Drawing.Point(995, 566);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(151, 39);
@@ -304,10 +304,10 @@ namespace SuperMarketManagementSystem
             this.ClearPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearPropertiesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearPropertiesButton.ForeColor = System.Drawing.Color.Black;
-            this.ClearPropertiesButton.Location = new System.Drawing.Point(107, 614);
+            this.ClearPropertiesButton.Location = new System.Drawing.Point(1170, 428);
             this.ClearPropertiesButton.Margin = new System.Windows.Forms.Padding(4);
             this.ClearPropertiesButton.Name = "ClearPropertiesButton";
-            this.ClearPropertiesButton.Size = new System.Drawing.Size(259, 39);
+            this.ClearPropertiesButton.Size = new System.Drawing.Size(101, 39);
             this.ClearPropertiesButton.TabIndex = 17;
             this.ClearPropertiesButton.Text = "Clear";
             this.ClearPropertiesButton.UseVisualStyleBackColor = false;
@@ -315,7 +315,7 @@ namespace SuperMarketManagementSystem
             // 
             // CategoryDataGridView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(231)))), ((int)(((byte)(203)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(225)))), ((int)(((byte)(184)))));
             this.CategoryDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.CategoryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CategoryDataGridView.BackgroundColor = System.Drawing.Color.White;
@@ -323,7 +323,7 @@ namespace SuperMarketManagementSystem
             this.CategoryDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.CategoryDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -332,51 +332,51 @@ namespace SuperMarketManagementSystem
             this.CategoryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.CategoryDataGridView.ColumnHeadersHeight = 30;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(239)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(235)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(201)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(189)))), ((int)(((byte)(97)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.CategoryDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.CategoryDataGridView.EnableHeadersVisualStyles = false;
-            this.CategoryDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(231)))), ((int)(((byte)(201)))));
-            this.CategoryDataGridView.Location = new System.Drawing.Point(524, 78);
+            this.CategoryDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(171)))));
+            this.CategoryDataGridView.Location = new System.Drawing.Point(29, 98);
             this.CategoryDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.CategoryDataGridView.Name = "CategoryDataGridView";
             this.CategoryDataGridView.RowHeadersVisible = false;
             this.CategoryDataGridView.RowHeadersWidth = 51;
             this.CategoryDataGridView.RowTemplate.Height = 28;
             this.CategoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CategoryDataGridView.Size = new System.Drawing.Size(780, 640);
+            this.CategoryDataGridView.Size = new System.Drawing.Size(804, 537);
             this.CategoryDataGridView.TabIndex = 28;
-            this.CategoryDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green;
-            this.CategoryDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(231)))), ((int)(((byte)(203)))));
+            this.CategoryDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Orange;
+            this.CategoryDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(225)))), ((int)(((byte)(184)))));
             this.CategoryDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.CategoryDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.CategoryDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.CategoryDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.CategoryDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.CategoryDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(231)))), ((int)(((byte)(201)))));
-            this.CategoryDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.CategoryDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(171)))));
+            this.CategoryDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.CategoryDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.CategoryDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.CategoryDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.CategoryDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.CategoryDataGridView.ThemeStyle.HeaderStyle.Height = 30;
             this.CategoryDataGridView.ThemeStyle.ReadOnly = false;
-            this.CategoryDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(239)))), ((int)(((byte)(220)))));
+            this.CategoryDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(235)))), ((int)(((byte)(207)))));
             this.CategoryDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.CategoryDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.CategoryDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.CategoryDataGridView.ThemeStyle.RowsStyle.Height = 28;
-            this.CategoryDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(201)))), ((int)(((byte)(138)))));
+            this.CategoryDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(189)))), ((int)(((byte)(97)))));
             this.CategoryDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.CategoryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CategoryDataGridView_CellContentClick);
             // 
             // ManagersButton
             // 
-            this.ManagersButton.BackColor = System.Drawing.Color.Transparent;
+            this.ManagersButton.BackColor = System.Drawing.Color.Goldenrod;
             this.ManagersButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ManagersButton.FlatAppearance.BorderSize = 0;
             this.ManagersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
@@ -384,10 +384,10 @@ namespace SuperMarketManagementSystem
             this.ManagersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManagersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.ManagersButton.ForeColor = System.Drawing.Color.Black;
-            this.ManagersButton.Location = new System.Drawing.Point(935, 25);
+            this.ManagersButton.Location = new System.Drawing.Point(941, 13);
             this.ManagersButton.Margin = new System.Windows.Forms.Padding(4);
             this.ManagersButton.Name = "ManagersButton";
-            this.ManagersButton.Size = new System.Drawing.Size(183, 52);
+            this.ManagersButton.Size = new System.Drawing.Size(172, 57);
             this.ManagersButton.TabIndex = 57;
             this.ManagersButton.Text = "Managers";
             this.ManagersButton.UseVisualStyleBackColor = false;
@@ -398,7 +398,7 @@ namespace SuperMarketManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1058, 601);
+            this.ClientSize = new System.Drawing.Size(1330, 653);
             this.Controls.Add(this.ManagersButton);
             this.Controls.Add(this.CategoryDataGridView);
             this.Controls.Add(this.label1);
